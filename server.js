@@ -4,7 +4,7 @@ import fs from "fs"
 
 const server = express();
 
-server.get("/product",(req,res)=>{
+server.get("/",(req,res)=>{
     fs.readFile("product.json","utf-8",(err,data)=>{
         if(err){
             res.status(500).send("error reading file")
